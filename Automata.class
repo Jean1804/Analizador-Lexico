@@ -42,7 +42,21 @@ class Automata
 					}
 					break;
 					
-				case 1 : 
+				case 1 : c=SigCar(ref i);
+					if((lenguaje=" \n\r\t").IndexOf(c)>=0)
+						_edoAct=1;
+					else
+					{
+						if((lenguaje="!\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]
+							^_'abcdefghijklmnopqrstuvwxyz{|}~€,ƒ„…†‡^‰Š< ŒŽ''
+							˵˶--~™š>œžŸ ¡¢£¤¥§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿\f").IndexOf(c)>=0) _edoAct=2;
+						else
+						{
+							i = iniToken;
+							return false;
+						}
+						break;
+					}
 			}
 		
 	
